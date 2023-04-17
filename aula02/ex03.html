@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Document </title>
+    <style> dt {margin-bottom: 5px;}
+    .row {display: flex;}
+    </style>
+</head>
+<body>   
+        <form name="PersonData" action="http://192.168.160.36/FormEcho.aspx" method="post">
+            <input type="hidden" name="FormName" value="UserForm" />
+            <h1>Questionário</h1>
+            <dl>
+            <fieldset>
+                <legend>Informação pessoal</legend>
+                <dt>Curso:
+                     
+                         <select name="Course">
+                            <option value="Licenciatura em Engenharia Informática">Licenciatura em Engenharia Informática</option>
+                            <option value="Mestrado Integrado em Engenharia de Computadores e Telemática">Mestrado Integrado em Engenharia de Computadores e Telemática</option>
+                            <option value="Mestrado Integrado em Engenharia Elétrónica e Telecomunicações">Mestrado Integrado em Engenharia Elétrónica e Telecomunicações</option>
+                            <option value="Outra">Outra</option>
+                         </select>
+                        </dt>
+                
+                <dt>Nome:
+                    
+                        <input type="text" name="FirstName" placeholder="Nome" />
+                    </dt>
+
+                <dt>Sobrenome:
+<input type="text" name="LastName" placeholder="Sobrenome" /> </dt>
+                    
+
+                <dt>Palavra-Passe:
+                    
+                        <input type="password" name="Password" placeholder="Digite a palavra passe" />
+                    </dt>
+            </fieldset>
+<br>
+            <fieldset>
+                <legend>Comentários</legend>    
+                    <dd>
+                        <textarea name="Comments" rows="4" cols="80" placeholder="Insira os seus comentários"></textarea>
+                    </dd>
+                    
+            </fieldset> <br>
+            <div class="row">
+            <fieldset style="width:50%">
+                <legend> Meios de transporte </legend>
+                    <dt>
+                        <input type="checkbox" name="vehicle" value="Bicicleta"> Bicicleta <br>
+                        <input type="checkbox" name="vehicle" value="Carro"> Carro <br>
+                        <input type="checkbox" name="vehicle" value="Comboio"> Comboio
+                    </dt>
+            </fieldset>
+            <fieldset style="width:50%">
+                <legend> Cor preferida </legend>
+                    <dt>
+                        <input type="radio" name="color" value="Azul"> Azul <br>
+                        <input type="radio" name="color" value="Verde"> Verde <br>
+                        <input type="radio" name="color" value="Vermelho"> Vermelho <br>
+                        <input type="radio" name="color" value="Outra"> Outra
+
+                    </dt>
+            </fieldset>
+            </div>
+            </dl>
+            <div style="margin: auto; width: fit-content; text-align: center;">
+                <input name="Button" type="Submit" />
+                <input type="reset" name="resetBtn" value="Reset" />
+             </div>
+        </form> 
+    
+</body>
+</html>

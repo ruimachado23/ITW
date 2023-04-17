@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div class="mb-3 input-group">
+                <label for="exampleInputEmail1" class="input-group-text" >Nome</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3 input-group">
+                <label for="exampleInputEmail1" class="input-group-text">Morada</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3 input-group">
+                <label for="exampleInputEmail1" class="input-group-text">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3 input-group">
+                    <div class="input-group-text col me-3">
+                        <input class="form-check-input mt-0" type="checkbox" value="1" aria-label="Checkbox for following text input">
+                        Relva Frente - 100€
+                    </div>
+                    <div class="input-group-text col mx-3">
+                        <input class="form-check-input mt-0" type="checkbox" value="2" aria-label="Checkbox for following text input">
+                        Relva Trás - 80€
+                    </div>
+                    <div class="input-group-text col mx-3">
+                        <input class="form-check-input mt-0" type="checkbox" value="3" aria-label="Checkbox for following text input">
+                        Bancada Central - 65€
+                    </div>
+                    <div class="input-group-text col ms-3">
+                        <input class="form-check-input mt-0" type="checkbox" value="4" aria-label="Checkbox for following text input">
+                        Bancada Lateral - 50€
+                    </div>
+            </div>
+            <button type="submit" class="btn btn-secondary col-12">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function() {
+    $("#Document").submit(function(event) {
+        var retVal = true;
+
+        var nome = $("#Nome").val().trim();
+        if (nome.length < 10 || nome.length > 100) {
+            retVal = false;
+            $("#NomeError").removeClass("d-none");
+        } else {
+            $("#NomeError").addClass("d-none");
+        }
+
+        var morada = $("#Morada").val().trim();
+        if (morada.length < 20 || morada.length > 200) {
+            retVal = false;
+            $("#MoradaError").removeClass("d-none");
+        } else {
+            $("#MoradaError").addClass("d-none");
+        }
+
+        var email = $("#Email").val().trim();
+        if (email.length < 10 || email.length > 100 || email.indexOf('@') > email.indexOf('.')) {
+            retVal = false;
+            $("#EmailError").removeClass("d-none");
+        } else {
+            $("#EmailError").addClass("d-none");
+        }
+
+        var local = $("input[name='local']:checked")
+        if (local.length < 2) {
+            retVal = false;
+            $("#LocalError").removeClass("d-none");
+        } else {
+            $("#LocalError").addClass("d-none");
+        }
+
+        return retVal
+    })
+
+    var lst = []
+    $('input[name="local"]').change(function() {
+        lst.push($('input[name="local"]:checked').val())
+        console.log(lst)
+
+        var max = lst[0]
+        for (var i = 0; i < lst.length; i++) {
+            if (lst[i] > max) {
+                max = lst[i];
+            }
+        }
+
+        document.getElementById("preco").value = max
+    })
+
+    $('#limpar').click(function() {
+        $('#NomeError').addClass("d-none");
+        $('#MoradaError').addClass("d-none");
+        $("#EmailError").addClass("d-none");
+        $("#LocalError").addClass('d-none');
+    })
+})
+    </script>
+</body>
+</html>

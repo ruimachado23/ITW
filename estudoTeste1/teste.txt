@@ -1,0 +1,62 @@
+## 1. Qual a estrutrura base dum documento HTML?
+head: cabeçalho do documento (aquilo que não é representado)
+body: corpo do documento (aquilo que é representado)
+
+## 2. Caracteriza e explica o que é um marcador HTML.
+< >   </ >
+Como o próprio nome diz, uma tag é um marcador que na linguagem html, é responsável pela formatação do documento, 
+indicando o tipo de elemento com que estamos a trabalhar.
+
+## 3. Quais são os atributos a ter em conta quando se quer saber o tamanho total dum elemento HTML?
+MB PC
+margin - border - padding - content 
+
+## 4. Onde se deve colocar os scripts num documento HTML e porquê?
+Os scripts devem ser colocados no final do body. Assim, o conteúdo é representado antes do script. Caso o script
+apresente algum erro, não danaficará o conteúdo pois este já havia sido representado anteriormente.
+
+## 5. Onde se podem definir estilos e qual a sua ordem de precedência?
+1. in-line
+2. no head <style>
+3. linkado no head
+
+## 6. O que significa 'responsividade' no contexto do desenvolvimento web?
+Em traços gerais, responsividade é uma adaptação do aspeto/estrutrura do conteúdo do site com base no dispositivo
+ou tamanho de janela em questão.
+
+## 7. Enumera 3 vantagens do Boostrap.
+Em primeiro lugar, o Boostrap apresenta uma responsividade embutida. Depois, não é necessário definir estilos, pois 
+estes já estão feitos no Boostrap, apenas é preciso lhes fazer referência. Finalmente, não é necessário escrever tanto 
+Javascript, pois também existe "animações" (comportamentos) previamente feitos, apenas é necessário lhes fazer 
+referência.
+
+## 8. Quais são as 3 linguagens que um Web Developer deve saber usar e para que serve cada uma?
+HTML: conteúdo da página
+CSS: display e estilo da página
+Javascript: comportamento e ações do conteúdo
+
+## 9. Caracteriza o Javascript quanto à tipagem. Dá uma vantagem e uma desvantagem dessa forma de tipagem.
+O Javascript é uma linguagem fracamente tipada. Consequentemente, torna-se uma linguagem muito flexível (vantagem)
+contudo pode dar origens a vários type errors.
+
+## 10. O que significa a sigla DOM e o que é que nos permite fazer?
+Documents Object Model
+Serve para manipular o documento. Define uma estrutrura lógica do conteúdo e a forma de como o documento é acessado 
+e manipulado.
+
+#11. Explica o funcionamento do protocolo HTTP.
+O protocolo HTTP é a base para a comunicação de dados e troca de documentos de hipertexto da world wide web entre
+o cliente e o servidor. 
+Esta troca é realizada da seguinte forma: 
+O Web Cliente envia um pedido para o Server através do browser e recebe uma resposta do server. Após este comunicar 
+com a database e verificar que consegue emitir uma resposta (se não conseguir, é emitido um erro).
+
+#12. Explica os campos de uma url.
+PSPCRD
+<protocolo>://<servidor>:<porta>/<caminho>/<recurso>?dados
+
+#13. Define o HTML.
+HTML é uma linguagem de marcação (Hypertext Markup Language), criada por Tim Berners-Lee, utilizada para a construção
+e desenvolvimento de elementos (conteúdo) que constituem os websites.
+
+
